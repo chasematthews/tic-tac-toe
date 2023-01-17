@@ -1,0 +1,178 @@
+:root {
+    --light-blue: rgb(231, 246, 248);
+    --blue-green: rgb(74, 157, 172);
+    --dark-blue: rgb(47, 57, 88);
+    --white: rgb(243, 242, 242);
+    --shadow: rgba(2, 38, 87, 0.253) 0px 1px 4px;
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 40px;
+    --spacing-xxl: 80px;
+    --border-radius: 8px;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*Header Styling*/
+
+.header {
+    background-color: var(--light-blue);
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.header-text {
+    color: var(--dark-blue);
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+/*Title Styling*/
+.title {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+/*Buttons Styling*/
+
+.btns-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+}
+
+.btns-wrapper > button {
+    font-size: xx-large;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: var(--white);
+}
+
+#reset-btn:hover, #new-game-btn:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+/*Game Container Styling*/
+
+.game-container {
+    display: flex;
+    justify-content: center;
+}
+
+.game-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    background-color: var(--white);
+    border: 2px solid var(--blue-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+#box0 {border-left: 0px; border-top: 0px}
+#box1 {border-top: 0px;}
+#box2 {border-top: 0px; border-right: 0px}
+#box3 {border-left: 0px}
+#box5 {border-right: 0px}
+#box6 {border-left: 0px; border-bottom: 0px}
+#box7 {border-bottom: 0px;}
+#box8 {border-bottom: 0px; border-right: 0px}
+
+/*Footer Styling*/
+
+.footer {
+    background-color: var(--dark-blue);
+    padding: var(--spacing-sm);
+    display: flex;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.footer-text {
+    color: var(--white);
+    font-weight: 500;
+    font-size: medium;
+}
+
+/*Modal Styling*/
+
+.modal {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#new-game-form {
+    background-color: var(--light-blue);
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.form-title {
+    font-size: x-large;
+    font-weight: 500;
+}
+
+#new-game-form > .form-input > input {
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius);
+    border-width: 1px;
+    box-shadow: var(--shadow);
+}
+
+#new-game-form > .buttons-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+#new-game-form > .buttons-wrapper > button {
+    font-size: medium;
+    background-color: var(--light-blue);
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius);
+    border: none;
+}
+
+#new-game-form > .buttons-wrapper > button:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
